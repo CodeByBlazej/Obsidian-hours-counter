@@ -11,7 +11,7 @@ class HourCounter
     @final_minutes = nil
   end
 
-  BASE_DIR  = "C:/Users/YOUR_NAME/Desktop/Coding Journey/All Daily Notes" # <-- change me
+  BASE_DIR  = "C:/Users/HP/Desktop/Coding Journey/All Daily Notes" # <-- change me
   DATE_FMT  = "%d-%m-%Y"
 
   def start
@@ -19,6 +19,7 @@ class HourCounter
     date_to
     scan
     count_time
+    display
   end
 
   def dates_from
@@ -76,6 +77,10 @@ class HourCounter
 
     @final_hours = hours
     @final_minutes = minutes
+  end
+
+  def display
+    puts "#{@final_hours} hours and #{@final_minutes}"
   end
 
   private
