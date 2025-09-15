@@ -5,10 +5,10 @@ class HourCounter
   def initialize
     @date_from = nil
     @date_to = nil 
-    @all_hours = nil
-    @all_minutes = nil
-    @final_hours = nil
-    @final_minutes = nil
+    @all_hours = 0
+    @all_minutes = 0
+    @final_hours = 0
+    @final_minutes = 0
   end
 
   BASE_DIR  = "C:/Users/HP/Desktop/Coding Journey/All Daily Notes" # <-- change me
