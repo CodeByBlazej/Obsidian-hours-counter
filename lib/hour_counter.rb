@@ -11,7 +11,8 @@ class HourCounter
     @final_minutes = 0
   end
 
-  BASE_DIR  = "C:/Users/HP/Desktop/Coding Journey/All Daily Notes" # <-- change me
+
+  BASE_DIR  = "/mnt/c/Users/HP/Desktop/Coding Journey/All Daily Notes" # <-- change me
   DATE_FMT  = "%d-%m-%Y"
 
   def start
@@ -45,7 +46,7 @@ class HourCounter
     puts "Type ending year"
     year = gets.chomp
 
-    @date_to = "#{day}-#{month}-#{year}"
+    @date_to = Date.strptime("#{day}-#{month}-#{year}", DATE_FMT)
   end
 
   def scan
@@ -80,7 +81,7 @@ class HourCounter
   end
 
   def display
-    puts "#{@final_hours} hours and #{@final_minutes}"
+    puts "#{@final_hours} hours and #{@final_minutes} minutes"
   end
 
   private
