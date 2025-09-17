@@ -32,7 +32,7 @@ class HourCounter
     puts "Type starting year"
     year = gets.chomp
 
-    @date_from = "#{day}-#{month}-#{year}"
+    @date_from = Date.strptime("#{day}-#{month}-#{year}", DATE_FMT)
   end
 
   def date_to
@@ -91,7 +91,7 @@ class HourCounter
     h = text[/(\d+)\s*(?:h|hr|hrs|hour|hours)\b/i, 1]&.to_i
     m = text[/(\d+)\s*(?:m|min|mins|minute|minutes)\b/i, 1]&.to_i
 
-    if h || md
+    if h || m
       return [h || 0, m || 0]
     end
 
